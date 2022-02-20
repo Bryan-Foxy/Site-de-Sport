@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service class="SymfonyBro\ErpCoreBundle\Twig\ListTranslatorExtension" id="symfony_bro_erp_core.twig.list_translator_extension">
+            <argument id="translator" type="service"/>
+            <tag name="twig.extension"/>
+        </service>
+
+        <service class="SymfonyBro\ErpCoreBundle\Model\SubjectUrlProvider" id="symfony_bro_erp_core.model.subject_url_provider"/>
+        <service class="SymfonyBro\ErpCoreBundle\Model\SubjectFinder" id="symfony_bro_erp_core.model.subject_finder"/>
+
+
+    </services>
+
+</container>
